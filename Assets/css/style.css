@@ -1,0 +1,41 @@
+* {
+    font-family: monospace;
+    color: ghostwhite;
+    display: flexbox;
+
+
+}
+
+.head-container {
+    background-color: black;
+    background-image: radial-gradient(
+        rgba(0, 150, 0, 0.75), black 120%
+      );
+      height: 25vh;
+}
+
+.term-name {
+    font-size: 50px;
+    margin-left: 5%;
+    margin-top: 5%;
+    padding: 5%;
+}
+
+.term-name::after {
+    content: "";
+    width: 10px;
+    height: 50px;
+    background: #ffffff;
+    display: inline-block;
+    animation: cursor-blink 1.5s steps(2) infinite;
+}
+
+body {
+    background-color: black;
+}
+
+@keyframes cursor-blink {
+    0% {
+      opacity: 0;
+    }
+  }
