@@ -1,33 +1,40 @@
 * {
     font-family: monospace;
     color: ghostwhite;
-    display: flexbox;
-
-
+    display: block;
+    box-sizing: border-box;
 }
 
 .head-container {
     background-color: black;
     background-image: radial-gradient(
-        rgba(0, 150, 0, 0.75), black 120%
+        rgba(50, 50, 50, 0.75), black 120%
       );
       height: 25vh;
+      position: absolute;
+      width: 100%;
+      display: flex;
+      align-items: center;
 }
 
 .term-name {
     font-size: 50px;
-    margin-left: 5%;
-    margin-top: 5%;
-    padding: 5%;
+    padding: 2%;
+    word-spacing: -20px;
 }
 
-.term-name::after {
+.blinking-cursor {
     content: "";
     width: 10px;
-    height: 50px;
+    height: 40px;
+    margin-top: 50px;
     background: #ffffff;
-    display: inline-block;
+    display: inline-flex;
+    position: relative;
+    top: 5px;
+    /* right: 20px; */
     animation: cursor-blink 1.5s steps(2) infinite;
+    
 }
 
 body {
