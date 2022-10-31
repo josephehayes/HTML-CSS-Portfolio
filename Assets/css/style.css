@@ -1,8 +1,11 @@
 * {
     font-family: monospace;
     color: ghostwhite;
-    display: block;
     box-sizing: border-box;
+}
+
+body {
+    background-color: black;
 }
 
 .head-container {
@@ -10,17 +13,20 @@
     background-image: radial-gradient(
         rgba(50, 50, 50, 0.75), black 120%
       );
-      height: 25vh;
-      position: absolute;
-      width: 100%;
-      display: flex;
-      align-items: center;
+    height: 25vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-bottom: 1px solid gray;
 }
 
 .term-name {
     font-size: 50px;
     padding: 2%;
     word-spacing: -20px;
+    position: relative;
+    bottom: 25%;
 }
 
 .blinking-cursor {
@@ -32,13 +38,28 @@
     display: inline-flex;
     position: relative;
     top: 5px;
-    /* right: 20px; */
-    animation: cursor-blink 1.5s steps(2) infinite;
-    
+    animation: cursor-blink 1.5s steps(2) infinite;  
 }
 
-body {
-    background-color: black;
+.img-container {
+    border: 2px solid;
+    width: 100px;
+    height: 100px;
+    display: inline-flex;
+    position: relative;
+    left: 50vw;
+    top: 5vh;
+    font-size: 25%;
+}
+
+.nav-container {
+    position: relative;
+    width: 100vw;
+    top: 50%;
+}
+
+li {
+    list-style: square;
 }
 
 @keyframes cursor-blink {
