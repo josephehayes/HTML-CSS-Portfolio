@@ -11,41 +11,87 @@
 </head>
 
 <body>
-    <header>
-        <div class="head-container">
+    <header class="head-container" id="home">
+        <div>
             <h1 class="term-name">~ @Joseph-Hayes >
                 <span class="blinking-cursor"></span>
-                <span class="img-container"><img src="./Assets/images/luffytemppfp.jfif"
-                        alt="Stylized portrait of me."></span>
+                <span><img src="./Assets/images/josephpic.jfif" alt="pic of me"></span>
             </h1>
         </div>
     </header>
     <main>
         <nav class="nav-container">
             <ul>
-                <li>Home</li>
-                <li>About Me</li>
-                <li>GitHub</li>
-                <li>Contact</li>
+                <li class="home"><a href="#home">Home</a></li>
+                <li class="about"><a href="#about">About Me</a></li>
+                <li class="github"><a href="https://github.com/josephehayes/">GitHub</a></li>
+                <li class="contact"><a href="#contact">Contact</a></li>
             </ul>
         </nav>
-        <div class="about-container">
+        <div class="about-container" id="about">
             <section class="about-content">
-                About me section
+                <p>Hi, welcome to my portfolio page!</p>
+                <p>My name is Joseph, and I'm an aspiring full-stack web developer</p>
+                <p>This page will walk you through a few of my recent projects</p>
+                <p>Enjoy!</p>
             </section>
         </div>
-        <div class="grid-container">
-            Project Grid
-        </div>
+        <section class="grid-container" id="grid">
+            <section class="row justify-center">
+                <div class="card-column grow">
+                    <a href="https://github.com/josephehayes/">
+                        <figure class="card project proj1">
+                            <h2 class="card-header">Project 1</h2>
+                            <div class="card-body">
+                                <p>Placeholder</p>
+                            </div>
+                        </figure>
+                    </a>
+                </div>
+                <div class="card-column grow">
+                    <a href="https://github.com/josephehayes/">
+                        <figure class="card project proj2">
+                            <h2 class="card-header">Project 2</h2>
+                            <div class="card-body">
+                                <p>Placeholder</p>
+                            </div>
+                        </figure>
+                    </a>
+                </div>
+            </section>
+            <section class="row justify-center">
+                <div class="card-column grow">
+                    <a href="https://github.com/josephehayes/">
+                        <figure class="card project proj3">
+                            <h2 class="card-header">Project 3</h2>
+                            <div class="card-body">
+                                <p>Placeholder</p>
+                            </div>
+                        </figure>
+                    </a>
+                </div>
+                <div class="card-column grow">
+                    <a href="https://github.com/josephehayes/">
+                        <figure class="card project proj4">
+                            <h2 class="card-header">Project 4</h2>
+                            <div class="card-body">
+                                <p>Placeholder</p>
+                            </div>
+                        </figure>
+                    </a>
+                </div>
+            </section>
+            </div>
+        </section>
     </main>
     <footer>
-        <nav class="contact-container">
-            <h1>Contact info section</h1>
+        <nav class="contact-container" id="contact">
+            <h1>Contact info</h1>
             <ul>
-                <li>FUBAR</li>
-                <li>FUBAR</li>
-                <li>FUBAR</li>
-                <li>FUBAR</li>
+                <li><a href=".contact-container">801.793.3244</a></li>
+                <li><a href=".contact-container">joey.hayes.1996@gmail.com</a></li>
+                <li><a href="https://github.com/josephehayes/">GitHub</a></li>
+                <li><a href="https://www.linkedin.com/in/josephehayes1/">LinkedIn</a></li>
             </ul>
         </nav>
     </footer>
