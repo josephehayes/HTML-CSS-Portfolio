@@ -29,10 +29,7 @@ header {
     width: 100%;
     display: flex;
     flex-direction: row;
-}
-
-header div {
-    width: 100%;
+    min-height: 200px;
 }
 
 .head-container {
@@ -41,36 +38,48 @@ header div {
     width: 100%;
 }
 
+.name-container {
+    flex: 0 1 50%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
 .term-name {
+    display: flex;
     font-size: 50px;
     padding-left: 2rem;
     word-spacing: -20px;
-    width: 100%;
-    width: 100%;
-    position: relative;
-    bottom: 1rem;
+    vertical-align: center;
 }
 
-.blinking-cursor {
+.term-name::after {
     content: "";
     width: 10px;
     height: 40px;
-    margin-top: 50px;
     background: #ffffff;
     display: inline-flex;
     position: relative;
     top: 5px;
+    left: 3px;
     animation: cursor-blink 1.5s steps(2) infinite;
+}
+
+.div-spacer {
+    flex: 0 1 10%;
+}
+
+.img-container {
+    flex: 0 1 50%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
 }
 
 img {
     width: 100px;
     height: 100px;
-    position: relative;
-    margin-left: 50vw;
-    margin-top: 5vh;
-    border-radius: 50%;
-    top: 2rem;
+    border-radius: 50%; 
 }
 
 .nav-container {
@@ -230,14 +239,11 @@ img {
 }
 
 @media screen and (min-width: 768px) {
-
-    /* on tablets, set columns to only be 50% of the width and not grow */
     .card-column {
         flex: 0 0 50%;
         max-width: 50%;
     }
 
-    /* select the last child to grow to full width if it has space to grow */
     .card-column:last-child {
         flex-grow: 1;
     }
@@ -245,12 +251,18 @@ img {
 
 /* media query for larger screens */
 @media screen and (min-width: 992px) {
-    header {
-        width: 75%;
-    }
-
     .card-column {
         flex: 0 0 33.333%;
         max-width: 33.333%;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .name-container {
+        display: none;
+    }
+
+    .img-container {
+        flex: 0 0 100%;
     }
 }
