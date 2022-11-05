@@ -46,11 +46,12 @@ header {
 }
 
 .term-name {
-    display: flex;
+    /* display: flex; */
     font-size: 50px;
     padding-left: 2rem;
     word-spacing: -20px;
     vertical-align: center;
+    min-width: fit-content;
 }
 
 .term-name::after {
@@ -258,11 +259,16 @@ img {
 }
 
 @media screen and (max-width: 991px) {
+    .head-container {
+        justify-content: flex-end;
+    }
+
     .name-container {
         display: none;
     }
 
     .img-container {
         flex: 0 0 100%;
+        transition: all 500ms ease-in-out;
     }
 }
